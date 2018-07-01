@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nero.constraintdemo.view.MyRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.nero.constraintdemo.view.MyImageView
+        android:id="@+id/imageview_singapore"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:contentDescription="@string/dummy"
+        android:scaleType="centerCrop" />
+
+    <com.nero.constraintdemo.view.MyImageView
+        android:id="@+id/favorite"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/imageview_singapore"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="-18dp"
+        android:contentDescription="@string/dummy"
+        android:padding="5dp"
+        android:src="@drawable/ic_star" />
+
+    <com.nero.constraintdemo.view.MyRelativeLayout
+        android:id="@+id/relative_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageview_singapore">
+
+        <com.nero.constraintdemo.view.MyTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/singapore"
+            android:textSize="24sp" />
+
+        <com.nero.constraintdemo.view.MyLinearLayout
+            android:id="@+id/camera_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:orientation="horizontal">
+
+            <com.nero.constraintdemo.view.MyTextView
+                android:id="@+id/cameraLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:labelFor="@+id/cameraType"
+                android:text="@string/camera" />
+
+            <com.nero.constraintdemo.view.MyRelativeLayout
+                android:id="@+id/relative_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.nero.constraintdemo.view.MyEditText
+                    android:id="@+id/cameraType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="textPersonName"
+                    android:text="@string/camera_value" />
+            </com.nero.constraintdemo.view.MyRelativeLayout>
+        </com.nero.constraintdemo.view.MyLinearLayout>
+
+        <com.nero.constraintdemo.view.MyLinearLayout
+            android:id="@+id/setings_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/camera_area"
+            android:orientation="horizontal">
+
+            <com.nero.constraintdemo.view.MyTextView
+                android:id="@+id/settingsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:labelFor="@+id/settings"
+                android:text="@string/settings" />
+
+            <com.nero.constraintdemo.view.MyRelativeLayout
+                android:id="@+id/relative_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.nero.constraintdemo.view.MyEditText
+                    android:id="@+id/settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="textPersonName"
+                    android:text="@string/camera_settings" />
+            </com.nero.constraintdemo.view.MyRelativeLayout>
+        </com.nero.constraintdemo.view.MyLinearLayout>
+
+
+        <com.nero.constraintdemo.view.MyTextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setings_area"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fadingEdge="vertical"
+            android:text="@string/singapore_description"
+            android:textSize="15sp" />
+    </com.nero.constraintdemo.view.MyRelativeLayout>
+
+    <com.nero.constraintdemo.view.MyLinearLayout
+        android:id="@+id/relative_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <com.nero.constraintdemo.view.MyButton
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/upload" />
+
+        <com.nero.constraintdemo.view.MyButton
+            android:id="@+id/discard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:elevation="0dp"
+            android:text="@string/discard" />
+    </com.nero.constraintdemo.view.MyLinearLayout>
+</com.nero.constraintdemo.view.MyRelativeLayout>
